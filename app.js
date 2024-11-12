@@ -70,9 +70,11 @@ botao.addEventListener('mousedown', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
-
     do {
         ligarLanterna()
+        setTimeout(() => {
+            // Codigo que será executado
+        }, 500);
         desligarLanterna()
     } while (botao === mousedown);
 })
@@ -97,6 +99,10 @@ botao.addEventListener('touchstart', (event) => {
 
     do {
         ligarLanterna()
+        setTimeout(() => {
+            // Codigo que será executado
+        }, 500);
+        desligarLanterna()
     } while (botao === mousedown);
 })
 
