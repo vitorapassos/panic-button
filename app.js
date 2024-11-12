@@ -97,7 +97,6 @@ botao.addEventListener('touchstart', (event) => {
 
     do {
         ligarLanterna()
-        desligarLanterna()
     } while (botao === mousedown);
 })
 
