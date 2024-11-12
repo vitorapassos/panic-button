@@ -71,9 +71,8 @@ botao.addEventListener('mousedown', (event) => {
     console.log("Botão pressionado")
     som.play()
     do {
-        ligarLanterna()
         setTimeout(() => {
-            // Codigo que será executado
+            ligarLanterna()
         }, 500);
         desligarLanterna()
     } while (botao === mousedown);
@@ -84,13 +83,10 @@ botao.addEventListener('mouseup', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão despressionado")
     som.pause()
+    desligarLanterna()
 })
 
-
-
 // Comandos Celular (TOUCH)
-
-
 // Touchstart:
 botao.addEventListener('touchstart', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
@@ -98,9 +94,8 @@ botao.addEventListener('touchstart', (event) => {
     som.play()
 
     do {
-        ligarLanterna()
         setTimeout(() => {
-            // Codigo que será executado
+            ligarLanterna()
         }, 500);
         desligarLanterna()
     } while (botao === mousedown);
@@ -111,4 +106,5 @@ botao.addEventListener('touchend', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão despressionado")
     som.pause()
+    desligarLanterna()
 })
