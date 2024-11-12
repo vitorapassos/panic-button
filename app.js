@@ -83,3 +83,27 @@ botao.addEventListener('mouseup', (event) => {
     console.log("Botão despressionado")
     som.pause()
 })
+
+
+
+// Comandos Celular (TOUCH)
+
+
+// Touchstart:
+botao.addEventListener('touchstart', (event) => {
+    event.preventDefault() //Ignorar o comportamento padrão
+    console.log("Botão pressionado")
+    som.play()
+
+    do {
+        ligarLanterna()
+        desligarLanterna()
+    } while (botao === mousedown);
+})
+
+// Touchend:
+botao.addEventListener('touchend', (event) => {
+    event.preventDefault() //Ignorar o comportamento padrão
+    console.log("Botão despressionado")
+    som.pause()
+})
