@@ -62,7 +62,6 @@ async function desligarLanterna() {
 }
 
 
-
 // Comandos MOUSE *
 
 // Mousedown:
@@ -70,12 +69,7 @@ botao.addEventListener('mousedown', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
-    botaoPressionado = true
-
-    setTimeout(() => {
-        ligarLanterna()
-    }, 500);
-    desligarLanterna()
+    ligarLanterna()
 })
 
 // Mouseup:
