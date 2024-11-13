@@ -96,26 +96,10 @@ botao.addEventListener('touchstart', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
-    ligarLanterna()
-    desligarLanterna().delay(1000)
+    do {
+        ligarLanterna().delay(500)
+        desligarLanterna().delay(500)
+    } while (botaoPressionado === true);
 })
 
 // Touchend:
