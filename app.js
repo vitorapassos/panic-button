@@ -75,12 +75,11 @@ botao.addEventListener('mousedown', (event) => {
     console.log("Botão pressionado")
     som.play()
     botaoPressionado = true
-    do {
-        setTimeout(() => {
-            ligarLanterna()
-        }, 500);
-        desligarLanterna()
-    } while (botaopressionado !== false);
+
+    setTimeout(() => {
+        ligarLanterna()
+    }, 500);
+    desligarLanterna()
 })
 
 // Mouseup:
@@ -98,11 +97,25 @@ botao.addEventListener('touchstart', (event) => {
     console.log("Botão pressionado")
     som.play()
     ligarLanterna()
-
-    setTimeout(() => {
-        desligarLanterna()
-    }, 1000);
-
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
+    ligarLanterna()
+    desligarLanterna().delay(1000)
 })
 
 // Touchend:
