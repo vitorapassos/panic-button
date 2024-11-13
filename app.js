@@ -97,13 +97,12 @@ botao.addEventListener('touchstart', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
+    ligarLanterna()
 
-    do {
-        setTimeout(() => {
-            ligarLanterna()
-        }, 500);
+    setTimeout(() => {
         desligarLanterna()
-    } while (botao === mousedown);
+    }, 1000);
+
 })
 
 // Touchend:
