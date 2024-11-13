@@ -7,10 +7,6 @@
 const botao = document.getElementById('botao')
 const imgLamp = document.getElementById('imgLamp')
 
-// Apoio a lógica
-botaoPressionado = false;
-
-
 // Pré carregamentos
 // Som
 let som = new Audio('sound/Alarm.mp3')
@@ -96,10 +92,7 @@ botao.addEventListener('touchstart', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
-    do {
-        ligarLanterna().delay(500)
-        desligarLanterna().delay(500)
-    } while (botaoPressionado === true);
+    ligarLanterna()
 })
 
 // Touchend:
@@ -108,5 +101,4 @@ botao.addEventListener('touchend', (event) => {
     console.log("Botão despressionado")
     som.pause()
     desligarLanterna()
-    botaoPressionado = false
 })
