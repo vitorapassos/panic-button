@@ -3,9 +3,12 @@
  * @author Vitor de Assis
  */
 
-// Variáveis e constantes
+// Variáveis e constantes 
 const botao = document.getElementById('botao')
 const imgLamp = document.getElementById('imgLamp')
+
+// Apoio a lógica
+botaoPressionado = false;
 
 
 // Pré carregamentos
@@ -13,6 +16,7 @@ const imgLamp = document.getElementById('imgLamp')
 let som = new Audio('sound/Alarm.mp3')
 
 // Comandos Lanterna
+let stream, track
 inicializarLanterna()
 
 // Lanterna(TORCH) async: faz com que a função rode e background
@@ -70,12 +74,13 @@ botao.addEventListener('mousedown', (event) => {
     event.preventDefault() //Ignorar o comportamento padrão
     console.log("Botão pressionado")
     som.play()
+    botaoPressionado = true
     do {
         setTimeout(() => {
             ligarLanterna()
         }, 500);
         desligarLanterna()
-    } while (botao === mousedown);
+    } while (botaopressionado !== false);
 })
 
 // Mouseup:
@@ -107,4 +112,5 @@ botao.addEventListener('touchend', (event) => {
     console.log("Botão despressionado")
     som.pause()
     desligarLanterna()
+    botaoPressionado = false
 })
